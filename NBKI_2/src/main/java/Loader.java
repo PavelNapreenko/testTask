@@ -1,16 +1,28 @@
 public class Loader {
     public static void main(String[] args) {
-        String intNum = "-125456456 1221";
-        String doubleNum = "125456.523";
-        if(NumsStringParser.getInt(intNum) == 0) {
+        String intNum = "125456456";
+        String doubleNum = "125456,52";
+
+        print(NumsStringParser.getInt(intNum));
+        print(NumsStringParser.getDouble(doubleNum));
+        print(NumsStringParser.getInt_1(intNum));
+        print(NumsStringParser.getDouble_1(doubleNum));
+    }
+
+    private static void print(int num) {
+        if (num == 0) {
             System.out.println("Значение цифры в строке неверно.");
         } else {
-            System.out.println(NumsStringParser.getInt(intNum));
+            System.out.println(num);
         }
-        if(NumsStringParser.getDouble(doubleNum) == 0) {
+    }
+
+    private static void print(double num) {
+        if (num == 0) {
             System.out.println("Значение цифры в строке неверно.");
         } else {
-            System.out.printf("%.2f",NumsStringParser.getDouble(doubleNum));
+            System.out.printf("%.2f", num);
+            System.out.println("\n");
         }
     }
 }
